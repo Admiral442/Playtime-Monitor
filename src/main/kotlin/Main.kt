@@ -133,7 +133,7 @@ class PlaytimeMonitor : JavaPlugin(), Listener {
 
         sender.sendMessage("")
         sender.sendMessage("${ChatColor.GOLD}-----------------------------------")
-        sender.sendMessage("${ChatColor.YELLOW}Playtime ${ChatColor.WHITE}$playerName")
+        sender.sendMessage("${ChatColor.YELLOW}Playtime: ${ChatColor.WHITE}$playerName")
         sender.sendMessage("${ChatColor.YELLOW}Time: ${ChatColor.WHITE}$timeFormatted")
         sender.sendMessage("${ChatColor.YELLOW}Last Login: ${ChatColor.WHITE}$lastLoginFormatted")
         sender.sendMessage("${ChatColor.GOLD}-----------------------------------")
