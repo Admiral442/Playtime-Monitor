@@ -1,0 +1,12 @@
+name: PlaytimeMonitor
+version: ${version}
+main: com.playtime.PlaytimeMonitor
+api-version: 1.20
+author: Admiral442
+description: A plugin that monitors player playtime
+
+commands:
+  playtime:
+    description: Display your playtime statistics
+    usage: /playtime [player]
+    aliases: [pt]
