@@ -18,5 +18,6 @@ Use /playtime to see your playtime, or /playtime <player> for other players.
 - Build Tool: Gradle
 
 **Image:**
+
 <img width="483" height="117" alt="image" src="https://github.com/user-attachments/assets/263de63f-6464-4077-9b1c-7000ce02b164" />
 
