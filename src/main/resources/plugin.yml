@@ -10,3 +10,16 @@ commands:
     description: Display your playtime statistics
     usage: /playtime [player]
     aliases: [pt]
+    permission: playtime.check
+    permission-message: You do not have permission to use this command.
+
+permissions:
+  playtime.check:
+    description: Allows checking your own playtime
+    default: true
+  playtime.check.others:
+    description: Allows checking other players' playtime
+    default: op
+  playtime.admin:
+    description: Allows administrative playtime commands
+    default: op

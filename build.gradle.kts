@@ -4,15 +4,20 @@ plugins {
 }
 
 group = "com.playtime"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    maven("https://oss.sonatype.org/content/repositories/snapshots")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
+
+
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT")
+    compileOnly("net.luckperms:api:5.4")
     implementation(kotlin("stdlib"))
 }
 

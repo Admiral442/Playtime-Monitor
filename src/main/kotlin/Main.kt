@@ -82,6 +82,10 @@ class PlaytimeMonitor : JavaPlugin(), Listener {
                 if (args.isEmpty()) {
                     // Show sender's playtime
                     if (sender is Player) {
+                        if (!sender.hasPermission("playtime.check")) {
+                            sender.sendMessage("${ChatColor.RED}You do not have permission to check your playtime.")
+                            return true
+                        }
                         showPlaytime(sender, sender)
                     } else {
                         sender.sendMessage("${ChatColor.RED}Console must specify a player name!")
@@ -90,6 +94,17 @@ class PlaytimeMonitor : JavaPlugin(), Listener {
                     // Show specified player's playtime
                     val targetName = args[0]
                     val target = Bukkit.getPlayer(targetName)
+
+                    if (sender is Player && sender.name.equals(targetName, ignoreCase = true)) {
+                        // Player checking their own playtime
+                        if (!sender.hasPermission("playtime.check")) {
+                            sender.sendMessage("${ChatColor.RED}You do not have permission to check your playtime.")
+                            return true
+                        }
+                    } else if (sender is Player && !sender.hasPermission("playtime.check.others")) {
+                        sender.sendMessage("${ChatColor.RED}You do not have permission to check other players' playtime.")
+                        return true
+                    }
 
                     if (target != null) {
                         showPlaytime(sender, target)
