@@ -18,10 +18,13 @@ Use /playtime to see your playtime, or /playtime <player> for other players.
 - Build Tool: Gradle
 
 
-**Permissions:**
-playtime.check (check your own playtime)
-playtime.check.others (check other players' playtime)
-playtime.admin (for future admin commands)
+# Permissions
+
+| Permission                  | Description                          |
+|-----------------------------|--------------------------------------|
+| **playtime.check**          | Check your own playtime              |
+| **playtime.check.others**   | Check other players' playtime        |
+| **playtime.admin**          | Full administrative permissions      |
 
 **Image:**
 
